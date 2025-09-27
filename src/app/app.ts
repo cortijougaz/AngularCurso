@@ -39,6 +39,11 @@ ngOnInit(): void{
     titulo: 'Practicar TypeScript',
     completada: true
   });
+   this.gestor.agregarTarea({
+    id: 3,
+    titulo: 'Aprender BackEnd',
+    completada: false
+  });
   this. lista = this.gestor.listarTareas();
 }
 
