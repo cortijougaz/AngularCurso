@@ -6,12 +6,14 @@ import { App } from './app';
 import {FormsModule} from '@angular/forms';
 import { Ciclo } from './ciclo/ciclo';
 import { UsuarioCardComponent } from './usuario-card-component/usuario-card-component';
+import { DirectivaEjemplo } from './directiva-ejemplo';
 
 @NgModule({
   declarations: [
     App,
     Ciclo,
-    UsuarioCardComponent
+    UsuarioCardComponent,
+    DirectivaEjemplo
   ],
   imports: [
     BrowserModule,

@@ -38,3 +38,7 @@ input:focus{
   border-color: #42a5f5;
   box-shadow: 0 0 8px rgba(25, 118, 210, 0.4);
 }
+.resaltado{
+  font-weight: bold;
+  color: blue;
+}
