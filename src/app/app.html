@@ -2,6 +2,11 @@
   {{mostrar ? 'Ocultar' : 'Mostrar'}}
 </button>
 
-<app-ciclo *ngIf="mostrar" [nombre]="usuario"></app-ciclo>
+@if (mostrar) {
+  <app-usuario-card-component [nombreUsuario]="usuario"></app-usuario-card-component>
+}
 
+@if (!mostrar) {
 <input [(ngModel)]="usuario" placeholder="Escribir un nombre">
+}
+

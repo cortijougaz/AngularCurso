@@ -8,6 +8,6 @@ import { Component } from '@angular/core';
 })
 export class App {
 
-  mostrar :boolean = true;
-  usuario :string = 'Ariana';
+  mostrar :boolean = false;
+  usuario :string = '';
 }

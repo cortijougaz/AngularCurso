@@ -5,11 +5,13 @@ import { AppRoutingModule } from './app-routing-module';
 import { App } from './app';
 import {FormsModule} from '@angular/forms';
 import { Ciclo } from './ciclo/ciclo';
+import { UsuarioCardComponent } from './usuario-card-component/usuario-card-component';
 
 @NgModule({
   declarations: [
     App,
-    Ciclo
+    Ciclo,
+    UsuarioCardComponent
   ],
   imports: [
     BrowserModule,
