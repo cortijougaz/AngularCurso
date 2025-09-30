@@ -1,0 +1,17 @@
+@for (producto of productos; track producto.id){
+  <p [ngStyle]="{'color': producto.precio>100 ? 'green' : 'red'}">
+    {{producto.nombre}} S/. {{producto.precio}}
+  </p>
+}
+<br>
+
+@for (producto of productos; track producto.id) {
+  <p [ngClass]="{
+        'precio-bajo': producto.precio < 50,
+        'precio-medio': producto.precio >= 50 && producto.precio <= 100,
+        'precio-alto': producto.precio > 100 && producto.precio <= 200,
+        'precio-premium': producto.precio > 200
+      }">
+    {{ producto.nombre }} S/. {{ producto.precio }}
+  </p>
+}

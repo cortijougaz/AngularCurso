@@ -1,0 +1,15 @@
+.precio-bajo {
+  color: gray;
+}
+
+.precio-medio {
+  color: blue;
+}
+
+.precio-alto {
+  color: green;
+}
+
+.precio-premium {
+  color: red;
+}

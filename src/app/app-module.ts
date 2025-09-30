@@ -7,13 +7,15 @@ import {FormsModule} from '@angular/forms';
 import { Ciclo } from './ciclo/ciclo';
 import { UsuarioCardComponent } from './usuario-card-component/usuario-card-component';
 import { DirectivaEjemplo } from './directiva-ejemplo';
+import { ProductosComponent } from './productos-component/productos-component';
 
 @NgModule({
   declarations: [
     App,
     Ciclo,
     UsuarioCardComponent,
-    DirectivaEjemplo
+    DirectivaEjemplo,
+    ProductosComponent
   ],
   imports: [
     BrowserModule,
