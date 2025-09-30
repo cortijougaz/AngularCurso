@@ -1,10 +1,7 @@
-<h1>Lista de Tareas</h1>
+<button (click) = "mostrar = !mostrar">
+  {{mostrar ? 'Ocultar' : 'Mostrar'}}
+</button>
 
-<ul>
-  <li *ngFor="let tarea of lista">
-    <input type ="checkbox" [checked] = "tarea.completada" disable>
-    {{tarea.titulo}}
-  </li>
-</ul>
+<app-ciclo *ngIf="mostrar" [nombre]="usuario"></app-ciclo>
 
-<p *ngIf="lista.length === 0">No hay tareas pendientes</p>
+<input [(ngModel)]="usuario" placeholder="Escribir un nombre">
