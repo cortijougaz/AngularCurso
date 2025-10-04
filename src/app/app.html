@@ -1,50 +1,5 @@
-<p *ngIf="usuario">Hola, {{usuario}}</p>
-<p *ngIf="!usuario" >No hay usuario registrado</p>
+<h2>Bienvenido {{usuario}}</h2>
 
-@if (usuario){
-  <p>Hola, {{usuario}}</p>
-} @else {
-  <p>No hay usuarios registrados</p>
-}
+<input [(ngModel)]= "nombre" placeholder="Escribe un nombre">
 
-<ul>
-  @for (fruta of frutas; track $index){
-    <li >{{fruta}}</li>
-  }
-</ul>
-
-<div [ngSwitch]="color">
-  <p *ngSwitchCase="'rojo'">El color es rojo</p>
-  <p *ngSwitchCase="'azul'">El color es azul</p>
-  <p *ngSwitchDefault>Color no reconocido</p>
-</div>
-
-@switch (color) {
-  @case ('rojo') {
-    <p>El color es rojo</p>
-  }
-  @case ('azul') {
-    <p>El color es azul</p>
-  }
-  @default {
-    <p>Color no reconocido</p>
-  }
-}
-
-<p [ngStyle]="{'color': esActivo ? 'green' : 'red'}">
-  Estado: {{esActivo ? 'Activo' : 'Inactivo'}}
-</p>
-
-<p [ngClass]="{'resaltado' : esActivo}" >
-  Texto con estilo
-</p>
-
-
-<p appDirectivaEjemplo>
-  Pasa el mouse sobre este texto y verás el efecto
-</p>
-<br>
-<br>
-<br>
-<br>
-<app-productos-component></app-productos-component>
+<button (click)="guardar()">Guardar Usuario</button>

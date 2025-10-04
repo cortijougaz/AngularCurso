@@ -1,5 +1,5 @@
-import { Component } from '@angular/core';
-import {empty} from 'rxjs';
+import {Component} from '@angular/core';
+import {Usuario} from './servicio/usuario';
 
 @Component({
   selector: 'app-root',
@@ -8,11 +8,13 @@ import {empty} from 'rxjs';
   styleUrl: './app.css'
 })
 export class App {
+  nombre = '';
+  usuario = '';
 
-  mostrar :boolean = false;
-  usuario :string = '';
-  frutas: string[] = ['Manzana', 'Bananas', 'Peras']
-  color = 'amarillo'
+  constructor(private usuarioService: Usuario) {}
+    guardar(){
+      this.usuarioService.setUsuario(this.nombre);
+      this.usuario = this.usuarioService.getUsuario();
+    }
 
-  esActivo:boolean = true;
 }
