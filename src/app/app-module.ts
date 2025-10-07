@@ -8,6 +8,8 @@ import { Ciclo } from './ciclo/ciclo';
 import { UsuarioCardComponent } from './usuario-card-component/usuario-card-component';
 import { DirectivaEjemplo } from './directiva-ejemplo';
 import { ProductosComponent } from './productos-component/productos-component';
+import { TareaForm } from './tarea/tarea-form/tarea-form';
+import { TareaList } from './tarea/tarea-list/tarea-list';
 
 @NgModule({
   declarations: [
@@ -15,7 +17,9 @@ import { ProductosComponent } from './productos-component/productos-component';
     Ciclo,
     UsuarioCardComponent,
     DirectivaEjemplo,
-    ProductosComponent
+    ProductosComponent,
+    TareaForm,
+    TareaList
   ],
   imports: [
     BrowserModule,
