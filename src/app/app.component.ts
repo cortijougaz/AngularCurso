@@ -3,11 +3,11 @@ import {Usuario} from './servicio/usuario';
 
 @Component({
   selector: 'app-root',
-  templateUrl: './app.html',
+  templateUrl: './app.component.html',
   standalone: false,
-  styleUrl: './app.css'
+  styleUrl: './app.component.css'
 })
-export class App {
+export class AppComponent {
   nombre = '';
   usuario = '';
 
