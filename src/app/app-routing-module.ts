@@ -1,15 +1,19 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import {HomeComponent} from './prueba/home/home.component';
-import {AboutComponent} from './prueba/about/about.component';
-import {ContactComponent} from './components/contact/contact.component';
+import {HomeComponent} from './component/home/home.component';
+import {UserComponent} from './component/user/user.component';
+import {UserDetailsComponent} from './component/user-details/user-details.component';
+import {UserSettingsComponent} from './component/user-settings/user-settings.component';
 
 const routes: Routes = [
   {path:'home', component: HomeComponent},
-  {path:'about', component: AboutComponent},
-  {path:'contact', component: ContactComponent},
+  {path:'user/:id', component: UserComponent, children:[
+    {path:'', redirectTo: 'details', pathMatch: 'full'},
+      {path: 'details', component: UserDetailsComponent},
+      {path: 'settings', component: UserSettingsComponent}]},
   {path: '', redirectTo: 'home', pathMatch: 'full'},
-  {path: '**', redirectTo: 'home'}
+  {path: '**', redirectTo: 'home'},
+
 ];
 
 @NgModule({

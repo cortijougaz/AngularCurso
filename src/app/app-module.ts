@@ -13,6 +13,9 @@ import { TareaList } from './tarea/tarea-list/tarea-list';
 import { HomeComponent } from './prueba/home/home.component';
 import { AboutComponent } from './prueba/about/about.component';
 import { ContactComponent } from './components/contact/contact.component';
+import { UserComponent } from './component/user/user.component';
+import { UserDetailsComponent } from './component/user-details/user-details.component';
+import { UserSettingsComponent } from './component/user-settings/user-settings.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +28,10 @@ import { ContactComponent } from './components/contact/contact.component';
     TareaList,
     HomeComponent,
     AboutComponent,
-    ContactComponent
+    ContactComponent,
+    UserComponent,
+    UserDetailsComponent,
+    UserSettingsComponent
   ],
   imports: [
     BrowserModule,
